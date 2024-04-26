@@ -16,6 +16,7 @@ function Popular() {
               name={item.name}
               new_price={item.new_price}
               old_price={item.old_price}
+              id={item.id}
             />
           );
         })}
