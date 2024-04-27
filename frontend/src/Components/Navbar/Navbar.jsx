@@ -10,31 +10,33 @@ function Navbar() {
   const { getTotalCartItems } = useContext(ShopContext);
   return (
     <div className="navbar">
-      <div className="nav-logo">
-        <img src={logo} alt="logo" />
-        <p>SHOPPER</p>
-      </div>
+      <Link to="/" style={{ textDecoration: "none" }}>
+        <div className="nav-logo">
+          <img src={logo} alt="logo" />
+          <p>SHOPPER</p>
+        </div>
+      </Link>
       <ul className="nav-menu">
         <li onClick={() => setMenu("shop")}>
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/" style={{ textDecoration: "none", color: "black" }}>
             Shop
           </Link>{" "}
           {menu === "shop" && <hr />}
         </li>
         <li onClick={() => setMenu("men")}>
-          <Link to="/men" style={{ textDecoration: "none" }}>
+          <Link to="/men" style={{ textDecoration: "none", color: "black" }}>
             Men
           </Link>{" "}
           {menu === "men" && <hr />}
         </li>
         <li onClick={() => setMenu("women")}>
-          <Link to="women" style={{ textDecoration: "none" }}>
+          <Link to="women" style={{ textDecoration: "none", color: "black" }}>
             Women
           </Link>{" "}
           {menu === "women" && <hr />}
         </li>
         <li onClick={() => setMenu("kids")}>
-          <Link to="kids" style={{ textDecoration: "none" }}>
+          <Link to="kids" style={{ textDecoration: "none", color: "black" }}>
             Kids
           </Link>{" "}
           {menu === "kids" && <hr />}
