@@ -5,7 +5,7 @@ function Item({ img, name, new_price, old_price, id }) {
   return (
     <div className="item">
       <Link to={`/product/${id}`}>
-        <img src={img} alt={name} />
+        <img src={img} alt={name} onClick={window.scrollTo(0, 0)} />
       </Link>
       <p>{name}</p>
       <div className="item-prices">

@@ -2,7 +2,7 @@ import React from "react";
 import "./ProductDisplay.css";
 import star_icon from "../Assets/star_icon.png";
 import star_dull_icon from "../Assets/star_dull_icon.png";
-function ProductDisplay({ product }) {
+function ProductDisplay({ product, addToCart }) {
   return (
     <div className="product-display">
       <div className="product-display-left">
@@ -54,7 +54,7 @@ function ProductDisplay({ product }) {
             <div>XXL</div>
           </div>
         </div>
-        <button>ADD TO CHART</button>
+        <button onClick={() => addToCart(product.id)}>ADD TO CHART</button>
         <p className="product-display-right-category">
           <span>Category: </span>Women, T-Shirt, Crop Top
         </p>
