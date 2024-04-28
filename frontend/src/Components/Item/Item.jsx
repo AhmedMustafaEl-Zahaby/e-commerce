@@ -2,10 +2,15 @@ import React from "react";
 import "./Item.css";
 import { Link } from "react-router-dom";
 function Item({ img, name, new_price, old_price, id }) {
+  const handleClick = (e) => {
+    if (e.target.tagName.toLowerCase() === "img") {
+      window.scrollTo(0, 0);
+    }
+  };
   return (
     <div className="item">
       <Link to={`/product/${id}`}>
-        <img src={img} alt={name} onClick={window.scrollTo(0, 0)} />
+        <img src={img} alt={name} onClick={handleClick} />
       </Link>
       <p>{name}</p>
       <div className="item-prices">
