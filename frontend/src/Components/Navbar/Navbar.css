@@ -1,3 +1,4 @@
+/* Navbar styling */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -26,6 +27,8 @@
   color: #626262;
   font-size: 20px;
   font-weight: 500;
+  position: relative;
+  z-index: 1000;
 }
 
 .nav-menu li {
@@ -80,4 +83,86 @@
   font-size: 14px;
   background-color: red;
   color: white;
+}
+.bars-icon {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.nav-menu.show {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  text-align: end;
+  position: absolute;
+  top: 12%;
+  left: 0;
+  background-color: #f8f9fa;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu.show button {
+  width: 157px;
+  height: 58px;
+  outline: none;
+  border: 1px solid #7a7a7a;
+  border-radius: 75px;
+  color: #515151;
+  font-size: 20px;
+  font-weight: 500;
+  background: white;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+.mobile {
+  display: none;
+}
+.nav-menu.show button:active {
+  background-color: #f3f3f3;
+}
+@media only screen and (max-width: 970px) {
+  .nav-menu {
+    display: none;
+  }
+  .bars-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 20px; /* Add margin only to the bars icon */
+  }
+  .nav-login-cart {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 25px;
+  }
+  .nav-cart-count {
+    margin-top: -35px;
+    margin-left: -40px;
+  }
+  .screen {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-logo p {
+    color: #171717;
+    font-size: 26px;
+    font-weight: 600;
+  }
 }
