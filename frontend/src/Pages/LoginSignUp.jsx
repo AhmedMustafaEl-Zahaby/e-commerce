@@ -10,7 +10,9 @@ function LoginSignUp() {
           <input type="email" placeholder="Email" />
           <input type="password" placeholder="Password" />
         </div>
-        <button>Continue</button>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <button>Continue</button>
+        </div>
         <p className="loginsignup-login">
           Already have an account? <span>Log In</span>
         </p>
