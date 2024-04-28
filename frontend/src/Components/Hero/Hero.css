@@ -1,7 +1,9 @@
 .hero {
-  height: 100vh;
+  height: auto;
+  /* min-height: 100vh; */
   background: linear-gradient(180deg, #fde1fd, #e1ffea22 60%);
   display: flex;
+  flex-wrap: wrap;
 }
 
 .hero-left {
@@ -11,8 +13,8 @@
   align-items: center;
   flex-direction: column;
   gap: 20px;
-  padding-left: 180px;
-  line-height: 1.1;
+  padding: 40px;
+  text-align: center;
 }
 
 .hero-left h2 {
@@ -25,16 +27,18 @@
   color: #171717;
   font-size: 100px;
   font-weight: 700;
+  margin: 0;
 }
 
 .hero-hand-icon {
   display: flex;
   align-items: center;
-  gap: 20px;
+  justify-content: center;
+  gap: 10px;
 }
 
 .hero-hand-icon img {
-  width: 105px;
+  width: 75px;
 }
 
 .hero-latest-btn {
@@ -42,13 +46,13 @@
   align-items: center;
   justify-content: center;
   gap: 15px;
-  width: 310px;
-  height: 70px;
-  border-radius: 75px;
+  width: 240px;
+  height: 50px;
+  border-radius: 25px;
   margin-top: 30px;
   background: #ff4141;
   color: white;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 500;
 }
 
@@ -57,4 +61,75 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.collections-text,
+.for-everyone-text {
+  text-align: center;
+}
+
+@media (max-width: 1378px) {
+  .hero-left h2 {
+    font-size: 20px;
+  }
+  .hero-left p {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-left {
+    padding: 20px;
+  }
+
+  .hero-left h2 {
+    font-size: 20px;
+  }
+
+  .hero-left p {
+    font-size: 45px;
+  }
+
+  .hero-hand-icon img {
+    width: 60px;
+  }
+
+  .hero-latest-btn {
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 630px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-right {
+    display: none;
+  }
+
+  .hero-left {
+    flex: 0;
+    margin-top: 30px;
+  }
+  .hero-left h2 {
+    color: #090909;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .hero-left p {
+    color: hsl(0, 0%, 9%);
+    font-size: 57px;
+    font-weight: 700;
+    margin: 0;
+  }
 }

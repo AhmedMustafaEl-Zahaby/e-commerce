@@ -9,10 +9,10 @@ function Shop() {
   return (
     <div>
       <Hero />
-      <Popular />
+      {/* <Popular />
       <Offers />
       <NewCollections />
-      <NewsLetter />
+      <NewsLetter /> */}
     </div>
   );
 }
