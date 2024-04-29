@@ -1,29 +1,39 @@
+/* Base styles */
+
 .footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 30px; /* Reduced the vertical gap */
+  padding: 20px; /* Added padding for better spacing */
 }
 
 .footer-logo {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px; /* Reduced the gap for smaller screens */
+  margin-bottom: 20px; /* Added margin for better spacing */
 }
 
 .footer-logo p {
   color: #383838;
-  font-size: 46px;
+  font-size: 32px; /* Reduced font size for smaller screens */
   font-weight: 700;
+  margin: 0; /* Removed margin for better alignment */
 }
 
 .footer-links {
   display: flex;
-  list-style: none;
-  gap: 50px;
+  padding: 0;
+  flex-wrap: wrap; /* Allow links to wrap to multiple lines */
+  gap: 20px; /* Reduced the gap for smaller screens */
   color: #252525;
-  font-size: 20px;
+  font-size: 16px; /* Reduced font size for smaller screens */
+  margin-bottom: 20px; /* Added margin for better spacing */
+  list-style: none;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-links li {
@@ -32,12 +42,12 @@
 
 .footer-social-icons {
   display: flex;
-  gap: 20px;
+  gap: 10px; /* Reduced the gap for smaller screens */
+  margin-bottom: 20px; /* Added margin for better spacing */
 }
 
 .social-icon-container {
-  padding: 10px;
-  padding-bottom: 6px;
+  padding: 8px; /* Reduced padding for smaller screens */
   background: #fbfbfb;
   border: 1px solid #ebebeb;
   cursor: pointer;
@@ -47,16 +57,41 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 20px; /* Reduced the gap for smaller screens */
   width: 100%;
-  margin-bottom: 30px;
   color: #1a1a1a;
-  font-size: 20px;
+  font-size: 16px; /* Reduced font size for smaller screens */
+  margin-bottom: 20px; /* Added margin for better spacing */
 }
+
 .footer-copyrights hr {
-  width: 80%;
-  height: 3px;
+  width: 100%; /* Adjusted width for smaller screens */
+  height: 2px; /* Reduced height for smaller screens */
   background: #c7c7c7;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px; /* Reduced border radius for smaller screens */
+}
+
+/* Media Queries for responsiveness */
+
+@media screen and (max-width: 768px) {
+  .footer-logo p {
+    font-size: 24px;
+  }
+
+  .footer-links {
+    font-size: 14px;
+  }
+
+  .footer-social-icons {
+    gap: 5px;
+  }
+
+  .social-icon-container {
+    padding: 6px;
+  }
+
+  .footer-copyrights {
+    font-size: 14px;
+  }
 }
