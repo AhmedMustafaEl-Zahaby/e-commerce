@@ -5,6 +5,25 @@
   color: #5e5e5e;
   font-size: 16px;
   font-weight: 600;
-  margin: 60px 170px;
+  margin: 60px 170px; /* Default margin */
   text-transform: capitalize;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .breadcrum {
+    margin: 60px 100px; /* Adjusted margin for smaller screens */
+  }
+}
+@media (max-width: 891px) {
+  .breadcrum {
+    margin: 60px 60px; /* Adjusted margin for smaller screens */
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .breadcrum {
+    margin: 40px 20px; /* Adjusted margin for mobile screens */
+    font-size: 14px; /* Adjusted font size for mobile screens */
+  }
 }

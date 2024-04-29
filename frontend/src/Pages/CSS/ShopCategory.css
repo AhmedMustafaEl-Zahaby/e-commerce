@@ -57,6 +57,12 @@
     margin: auto 10px;
   }
 }
+@media screen and (max-width: 395px) {
+  .shopcategory-indexSort {
+    align-items: center;
+    justify-content: center;
+  }
+}
 @media screen and (max-width: 768px) {
   .shopcategory-indexSort {
     gap: 5px;
