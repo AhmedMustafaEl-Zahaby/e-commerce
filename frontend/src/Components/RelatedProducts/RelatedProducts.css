@@ -3,21 +3,44 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  height: 90vh;
+  padding: 20px;
 }
+
 .related-products h1 {
   color: #171717;
-  font-size: 50px;
+  font-size: 3rem; /* 50px to 3rem */
   font-weight: 600;
+  text-align: center;
 }
+
 .related-products hr {
-  width: 200px;
+  width: 50%; /* Fixed width to percentage */
+  max-width: 200px;
   height: 6px;
   border-radius: 10px;
   background: #252525;
 }
+
 .related-products-item {
-  margin-top: 50px;
+  margin-top: 30px; /* Reduced margin-top */
   display: flex;
-  gap: 30px;
+  flex-wrap: wrap; /* Added flex-wrap to wrap items */
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .related-products {
+    height: auto; /* Adjusted height to auto */
+  }
+
+  .related-products h1 {
+    font-size: 2.5rem; /* Adjusted font-size for smaller screens */
+  }
+
+  .related-products-item {
+    margin-top: 20px; /* Reduced margin-top */
+    gap: 15px; /* Reduced gap between items */
+  }
 }

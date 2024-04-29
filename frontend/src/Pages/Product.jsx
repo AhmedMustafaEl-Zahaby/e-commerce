@@ -13,8 +13,8 @@ function Product() {
     <div className="product">
       <Breadcrum product={product} />
       <ProductDisplay product={product} addToCart={addToCart} />
-      {/* <DescribtionBox />
-      <RelatedProducts /> */}
+      <DescribtionBox />
+      <RelatedProducts />
     </div>
   );
 }
