@@ -62,7 +62,16 @@ function CartItem() {
             <p>Total</p>
             <p>${getTotalCartAmount()}</p>
           </div>
-          <button>PROCEED TO CHECKOUT</button>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              marginTop: "20px",
+            }}
+          >
+            <button>PROCEED TO CHECKOUT</button>
+          </div>
         </div>
         <div className="cart-items-promocode">
           <p>If you have a promocode, Entre it here</p>
